@@ -1,0 +1,66 @@
+// !$*UTF8*$!
+{
+	1B2899F4128743E4009E0E29 /* Gepeto */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = Gepeto;
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	1B289A07128743FA009E0E29 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	1B289A08128743FA009E0E29 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 1B2899F4128743E4009E0E29 /* Gepeto */;
+		activeTarget = 8D1107260486CEB800E47090 /* Gepeto */;
+		codeSenseManager = 1B289A08128743FA009E0E29 /* Code sense */;
+		executables = (
+			1B2899F4128743E4009E0E29 /* Gepeto */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 310854629;
+			PBXWorkspaceStateSaveDate = 310854629;
+		};
+		sourceControlManager = 1B289A07128743FA009E0E29 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	8D1107260486CEB800E47090 /* Gepeto */ = {
+		activeExec = 0;
+		executables = (
+			1B2899F4128743E4009E0E29 /* Gepeto */,
+		);
+	};
+}

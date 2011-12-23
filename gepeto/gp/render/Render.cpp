@@ -12,10 +12,10 @@
 
 Render::Render() 
 {
-    _red    = 0.1f;
-    _green  = 0.5f;
-    _blue   = 1.0f;
-    _alpha  = 1.0f;
+    _red    = 0.0f;
+    _green  = 0.0f;
+    _blue   = 0.0f;
+    _alpha  = 0.0f;
 }
 
 void Render::draw() 

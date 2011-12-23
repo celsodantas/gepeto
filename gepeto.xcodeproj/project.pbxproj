@@ -8,11 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		1B6E728214A097030093563A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6E728114A097030093563A /* Cocoa.framework */; };
-		1B6E728C14A097030093563A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B6E728A14A097030093563A /* InfoPlist.strings */; };
-		1B6E728E14A097030093563A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E728D14A097030093563A /* main.m */; };
-		1B6E729214A097030093563A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1B6E729014A097030093563A /* Credits.rtf */; };
-		1B6E729514A097030093563A /* GPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E729414A097030093563A /* GPAppDelegate.m */; };
-		1B6E729814A097040093563A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1B6E729614A097040093563A /* MainMenu.xib */; };
+		1B6E728E14A097030093563A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E728D14A097030093563A /* main.cpp */; };
+		1B6E72A114A097660093563A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6E72A014A097660093563A /* OpenGL.framework */; };
+		1B6E72AC14A098180093563A /* Gepeto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72AA14A098180093563A /* Gepeto.cpp */; };
+		1B6E72B114A098230093563A /* Render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72AD14A098230093563A /* Render.cpp */; };
+		1B6E72B214A098230093563A /* WindowManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72AE14A098230093563A /* WindowManager.cpp */; };
+		1B6E72B414A14E3A0093563A /* libglfw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6E72B314A14E3A0093563A /* libglfw.a */; };
+		1B6E72BA14A1730A0093563A /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72B914A1730A0093563A /* ResourceManager.cpp */; };
+		1B6E72BC14A176210093563A /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = 1B6E72BB14A176210093563A /* CHANGELOG */; };
+		1B6E72BE14A1768B0093563A /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 1B6E72BD14A1768B0093563A /* README.markdown */; };
+		1B6E72C014A178870093563A /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72BF14A178860093563A /* Core.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,14 +26,25 @@
 		1B6E728414A097030093563A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		1B6E728514A097030093563A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		1B6E728614A097030093563A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1B6E728914A097030093563A /* gepeto-Info.plist */ = {isa = PBXFileReference; path = "gepeto-Info.plist"; sourceTree = "<group>"; };
-		1B6E728B14A097030093563A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		1B6E728D14A097030093563A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1B6E728F14A097030093563A /* gepeto-Prefix.pch */ = {isa = PBXFileReference; path = "gepeto-Prefix.pch"; sourceTree = "<group>"; };
-		1B6E729114A097030093563A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		1B6E729314A097030093563A /* GPAppDelegate.h */ = {isa = PBXFileReference; path = GPAppDelegate.h; sourceTree = "<group>"; };
-		1B6E729414A097030093563A /* GPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPAppDelegate.m; sourceTree = "<group>"; };
-		1B6E729714A097040093563A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1B6E728914A097030093563A /* gepeto-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gepeto-Info.plist"; sourceTree = "<group>"; };
+		1B6E728D14A097030093563A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1B6E729E14A097610093563A /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = Library/Frameworks/SDL.framework; sourceTree = SDKROOT; };
+		1B6E72A014A097660093563A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		1B6E72AA14A098180093563A /* Gepeto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gepeto.cpp; sourceTree = "<group>"; };
+		1B6E72AB14A098180093563A /* Gepeto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gepeto.h; sourceTree = "<group>"; };
+		1B6E72AD14A098230093563A /* Render.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Render.cpp; sourceTree = "<group>"; };
+		1B6E72AE14A098230093563A /* WindowManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WindowManager.cpp; sourceTree = "<group>"; };
+		1B6E72AF14A098230093563A /* Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Render.h; sourceTree = "<group>"; };
+		1B6E72B014A098230093563A /* WindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowManager.h; sourceTree = "<group>"; };
+		1B6E72B314A14E3A0093563A /* libglfw.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw.a; path = ../sys/libglfw.a; sourceTree = "<group>"; };
+		1B6E72B614A14F8E0093563A /* glfw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glfw.h; sourceTree = "<group>"; };
+		1B6E72B714A15A570093563A /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
+		1B6E72B814A172420093563A /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
+		1B6E72B914A1730A0093563A /* ResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceManager.cpp; sourceTree = "<group>"; };
+		1B6E72BB14A176210093563A /* CHANGELOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG; sourceTree = "<group>"; };
+		1B6E72BD14A1768B0093563A /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
+		1B6E72BF14A178860093563A /* Core.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Core.cpp; sourceTree = "<group>"; };
+		1B6E72C114A1797C0093563A /* gepeto-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gepeto-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,7 +52,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B6E72A114A097660093563A /* OpenGL.framework in Frameworks */,
 				1B6E728214A097030093563A /* Cocoa.framework in Frameworks */,
+				1B6E72B414A14E3A0093563A /* libglfw.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +81,8 @@
 		1B6E728014A097030093563A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B6E72A014A097660093563A /* OpenGL.framework */,
+				1B6E729E14A097610093563A /* SDL.framework */,
 				1B6E728114A097030093563A /* Cocoa.framework */,
 				1B6E728314A097030093563A /* Other Frameworks */,
 			);
@@ -82,9 +102,9 @@
 		1B6E728714A097030093563A /* gepeto */ = {
 			isa = PBXGroup;
 			children = (
-				1B6E729314A097030093563A /* GPAppDelegate.h */,
-				1B6E729414A097030093563A /* GPAppDelegate.m */,
-				1B6E729614A097040093563A /* MainMenu.xib */,
+				1B6E72B514A14F8E0093563A /* GL */,
+				1B6E72A514A098050093563A /* sys */,
+				1B6E72A214A097C10093563A /* gp */,
 				1B6E728814A097030093563A /* Supporting Files */,
 			);
 			path = gepeto;
@@ -93,13 +113,62 @@
 		1B6E728814A097030093563A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1B6E72C114A1797C0093563A /* gepeto-Prefix.pch */,
 				1B6E728914A097030093563A /* gepeto-Info.plist */,
-				1B6E728A14A097030093563A /* InfoPlist.strings */,
-				1B6E728D14A097030093563A /* main.m */,
-				1B6E728F14A097030093563A /* gepeto-Prefix.pch */,
-				1B6E729014A097030093563A /* Credits.rtf */,
+				1B6E728D14A097030093563A /* main.cpp */,
+				1B6E72BB14A176210093563A /* CHANGELOG */,
+				1B6E72BD14A1768B0093563A /* README.markdown */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1B6E72A214A097C10093563A /* gp */ = {
+			isa = PBXGroup;
+			children = (
+				1B6E72AA14A098180093563A /* Gepeto.cpp */,
+				1B6E72AB14A098180093563A /* Gepeto.h */,
+				1B6E72A314A097C10093563A /* assets */,
+				1B6E72A414A097C10093563A /* render */,
+				1B6E72B714A15A570093563A /* Core.h */,
+				1B6E72BF14A178860093563A /* Core.cpp */,
+				1B6E72B814A172420093563A /* ResourceManager.h */,
+				1B6E72B914A1730A0093563A /* ResourceManager.cpp */,
+			);
+			path = gp;
+			sourceTree = "<group>";
+		};
+		1B6E72A314A097C10093563A /* assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
+		1B6E72A414A097C10093563A /* render */ = {
+			isa = PBXGroup;
+			children = (
+				1B6E72B014A098230093563A /* WindowManager.h */,
+				1B6E72AE14A098230093563A /* WindowManager.cpp */,
+				1B6E72AF14A098230093563A /* Render.h */,
+				1B6E72AD14A098230093563A /* Render.cpp */,
+			);
+			path = render;
+			sourceTree = "<group>";
+		};
+		1B6E72A514A098050093563A /* sys */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = sys;
+			sourceTree = "<group>";
+		};
+		1B6E72B514A14F8E0093563A /* GL */ = {
+			isa = PBXGroup;
+			children = (
+				1B6E72B614A14F8E0093563A /* glfw.h */,
+				1B6E72B314A14E3A0093563A /* libglfw.a */,
+			);
+			path = GL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +221,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B6E728C14A097030093563A /* InfoPlist.strings in Resources */,
-				1B6E729214A097030093563A /* Credits.rtf in Resources */,
-				1B6E729814A097040093563A /* MainMenu.xib in Resources */,
+				1B6E72BC14A176210093563A /* CHANGELOG in Resources */,
+				1B6E72BE14A1768B0093563A /* README.markdown in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,39 +233,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B6E728E14A097030093563A /* main.m in Sources */,
-				1B6E729514A097030093563A /* GPAppDelegate.m in Sources */,
+				1B6E728E14A097030093563A /* main.cpp in Sources */,
+				1B6E72AC14A098180093563A /* Gepeto.cpp in Sources */,
+				1B6E72B114A098230093563A /* Render.cpp in Sources */,
+				1B6E72B214A098230093563A /* WindowManager.cpp in Sources */,
+				1B6E72BA14A1730A0093563A /* ResourceManager.cpp in Sources */,
+				1B6E72C014A178870093563A /* Core.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		1B6E728A14A097030093563A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1B6E728B14A097030093563A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		1B6E729014A097030093563A /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1B6E729114A097030093563A /* en */,
-			);
-			name = Credits.rtf;
-			sourceTree = "<group>";
-		};
-		1B6E729614A097040093563A /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1B6E729714A097040093563A /* en */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		1B6E729914A097040093563A /* Debug */ = {
@@ -251,6 +296,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gepeto/gepeto-Prefix.pch";
 				INFOPLIST_FILE = "gepeto/gepeto-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/gepeto/sys\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -262,6 +311,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gepeto/gepeto-Prefix.pch";
 				INFOPLIST_FILE = "gepeto/gepeto-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/gepeto/sys\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

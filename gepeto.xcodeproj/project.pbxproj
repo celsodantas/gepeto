@@ -15,9 +15,9 @@
 		1B6E72B214A098230093563A /* WindowManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72AE14A098230093563A /* WindowManager.cpp */; };
 		1B6E72B414A14E3A0093563A /* libglfw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6E72B314A14E3A0093563A /* libglfw.a */; };
 		1B6E72BA14A1730A0093563A /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72B914A1730A0093563A /* ResourceManager.cpp */; };
-		1B6E72BC14A176210093563A /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = 1B6E72BB14A176210093563A /* CHANGELOG */; };
-		1B6E72BE14A1768B0093563A /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 1B6E72BD14A1768B0093563A /* README.markdown */; };
 		1B6E72C014A178870093563A /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72BF14A178860093563A /* Core.cpp */; };
+		1BC1897C14A414050038AD32 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 1BC1897A14A414050038AD32 /* README.markdown */; };
+		1BC1897D14A414050038AD32 /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = 1BC1897B14A414050038AD32 /* CHANGELOG */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,10 +41,10 @@
 		1B6E72B714A15A570093563A /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		1B6E72B814A172420093563A /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
 		1B6E72B914A1730A0093563A /* ResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceManager.cpp; sourceTree = "<group>"; };
-		1B6E72BB14A176210093563A /* CHANGELOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG; sourceTree = "<group>"; };
-		1B6E72BD14A1768B0093563A /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		1B6E72BF14A178860093563A /* Core.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Core.cpp; sourceTree = "<group>"; };
 		1B6E72C114A1797C0093563A /* gepeto-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gepeto-Prefix.pch"; sourceTree = "<group>"; };
+		1BC1897A14A414050038AD32 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
+		1BC1897B14A414050038AD32 /* CHANGELOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +113,11 @@
 		1B6E728814A097030093563A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1BC1897A14A414050038AD32 /* README.markdown */,
+				1BC1897B14A414050038AD32 /* CHANGELOG */,
 				1B6E72C114A1797C0093563A /* gepeto-Prefix.pch */,
 				1B6E728914A097030093563A /* gepeto-Info.plist */,
 				1B6E728D14A097030093563A /* main.cpp */,
-				1B6E72BB14A176210093563A /* CHANGELOG */,
-				1B6E72BD14A1768B0093563A /* README.markdown */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -221,8 +221,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B6E72BC14A176210093563A /* CHANGELOG in Resources */,
-				1B6E72BE14A1768B0093563A /* README.markdown in Resources */,
+				1BC1897C14A414050038AD32 /* README.markdown in Resources */,
+				1BC1897D14A414050038AD32 /* CHANGELOG in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +339,7 @@
 				1B6E729D14A097040093563A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

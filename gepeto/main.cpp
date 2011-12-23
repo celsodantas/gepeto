@@ -6,9 +6,13 @@
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+#include "gp/Gepeto.h"
 
-int main(int argc, char *argv[])
-{
-    return NSApplicationMain(argc, (const char **)argv);
+
+int main(int argc, char **argv)
+{    
+    Gepeto gepeto;
+    gepeto.start();
+    
+    return 0;
 }

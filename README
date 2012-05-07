@@ -1,0 +1,30 @@
+============
+GEPETO - Is a small Game Engine intended to help 
+new developers understand how a game engine works.
+
+It's still under development.
+
+============
+
+Features:
+ - Supported system: Mac OS X 10.6 
+ - OpenGL
+ - Basic Rendering Engine
+	- Shaders
+	- Post Effect Shaders
+ - Dae importer (.obj)
+
+Still missing fratures:
+ - Support to Windows XP/7
+ - Memory Management
+ - Strings
+ - Math Library
+ - Collections
+ - File System Handlers
+ - Clock
+ - Physics
+ - AI
+ - Animation
+ - Collada Importer (and remove the .obj importer)
+
+

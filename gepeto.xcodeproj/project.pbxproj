@@ -7,341 +7,593 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B6E728214A097030093563A /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6E728114A097030093563A /* Cocoa.framework */; };
-		1B6E728E14A097030093563A /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E728D14A097030093563A /* main.cpp */; };
-		1B6E72A114A097660093563A /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6E72A014A097660093563A /* OpenGL.framework */; };
-		1B6E72AC14A098180093563A /* Gepeto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72AA14A098180093563A /* Gepeto.cpp */; };
-		1B6E72B114A098230093563A /* Render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72AD14A098230093563A /* Render.cpp */; };
-		1B6E72B214A098230093563A /* WindowManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72AE14A098230093563A /* WindowManager.cpp */; };
-		1B6E72B414A14E3A0093563A /* libglfw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6E72B314A14E3A0093563A /* libglfw.a */; };
-		1B6E72BA14A1730A0093563A /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72B914A1730A0093563A /* ResourceManager.cpp */; };
-		1B6E72C014A178870093563A /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72BF14A178860093563A /* Core.cpp */; };
-		1BC1897C14A414050038AD32 /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 1BC1897A14A414050038AD32 /* README.markdown */; };
-		1BC1897D14A414050038AD32 /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = 1BC1897B14A414050038AD32 /* CHANGELOG */; };
+		002F39FA09D0881F00EBEB88 /* SDL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002F39F909D0881F00EBEB88 /* SDL.framework */; };
+		002F3A0009D0884600EBEB88 /* SDL.framework in Copy Frameworks into .app bundle */ = {isa = PBXBuildFile; fileRef = 002F39F909D0881F00EBEB88 /* SDL.framework */; };
+		002F3A2E09D0888800EBEB88 /* SDLMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 002F3A2C09D0888800EBEB88 /* SDLMain.m */; };
+		002F3A3F09D088BA00EBEB88 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 002F3A3E09D088BA00EBEB88 /* main.cpp */; };
+		002F3C0109D093BD00EBEB88 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002F3C0009D093BD00EBEB88 /* OpenGL.framework */; };
+		002F3C6109D0951E00EBEB88 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 002F3C6009D0951E00EBEB88 /* GLUT.framework */; };
+		1B289AAF1288A721009E0E29 /* GpIO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B289AAE1288A721009E0E29 /* GpIO.cpp */; };
+		1B289AC01288AA9A009E0E29 /* GpBaseShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B289ABF1288AA9A009E0E29 /* GpBaseShader.cpp */; };
+		1B48951512A2A0D100862C2A /* GpNormalDepthShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B48951412A2A0D100862C2A /* GpNormalDepthShader.cpp */; };
+		1B48952612A2A54500862C2A /* GpBasePostShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B48952512A2A54500862C2A /* GpBasePostShader.cpp */; };
+		1B48954F12A2B0F200862C2A /* GpSSAOShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B48954E12A2B0F200862C2A /* GpSSAOShader.cpp */; };
+		1B48957D12A459EC00862C2A /* GpFBO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B48957C12A459EC00862C2A /* GpFBO.cpp */; };
+		1B77B3AF138968BB000F6B55 /* filesystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B77B3AD138968BB000F6B55 /* filesystem.cpp */; };
+		1B77B3C1138A0C0E000F6B55 /* BEATTLE.obj in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3B4138A0C0E000F6B55 /* BEATTLE.obj */; };
+		1B77B3C2138A0C0E000F6B55 /* CUBE_TRIANGLE.obj in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3B5138A0C0E000F6B55 /* CUBE_TRIANGLE.obj */; };
+		1B77B3C3138A0C0E000F6B55 /* DUCKY.obj in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3B6138A0C0E000F6B55 /* DUCKY.obj */; };
+		1B77B3C4138A0C0E000F6B55 /* HALFCUBE.obj in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3B7138A0C0E000F6B55 /* HALFCUBE.obj */; };
+		1B77B3C5138A0C0E000F6B55 /* HOUSE.obj in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3B8138A0C0E000F6B55 /* HOUSE.obj */; };
+		1B77B3C6138A0C0E000F6B55 /* MINICOOPER.obj in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3B9138A0C0E000F6B55 /* MINICOOPER.obj */; };
+		1B77B3C7138A0C0E000F6B55 /* MONKEY.obj in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3BA138A0C0E000F6B55 /* MONKEY.obj */; };
+		1B77B3C8138A0C0E000F6B55 /* MONKEY_PLAN_SCENE.obj in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3BB138A0C0E000F6B55 /* MONKEY_PLAN_SCENE.obj */; };
+		1B77B3C9138A0C0E000F6B55 /* MONKEY_SMOTH.obj in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3BC138A0C0E000F6B55 /* MONKEY_SMOTH.obj */; };
+		1B77B3CA138A0C0E000F6B55 /* MONKEY_SUBSURF.obj in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3BD138A0C0E000F6B55 /* MONKEY_SUBSURF.obj */; };
+		1B77B3CB138A0C0E000F6B55 /* PLANE.obj in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3BE138A0C0E000F6B55 /* PLANE.obj */; };
+		1B77B3CC138A0C0E000F6B55 /* RND_CUBES.obj in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3BF138A0C0E000F6B55 /* RND_CUBES.obj */; };
+		1B77B3CD138A0C0E000F6B55 /* TORUS_SUPERSMOOTH.obj in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3C0138A0C0E000F6B55 /* TORUS_SUPERSMOOTH.obj */; };
+		1B77B3D7138A0CFB000F6B55 /* f-normal-depth.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3CF138A0CFB000F6B55 /* f-normal-depth.fs */; };
+		1B77B3D8138A0CFB000F6B55 /* f-radblur.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3D0138A0CFB000F6B55 /* f-radblur.fs */; };
+		1B77B3D9138A0CFB000F6B55 /* f-ssao-post.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3D1138A0CFB000F6B55 /* f-ssao-post.fs */; };
+		1B77B3DA138A0CFB000F6B55 /* f-ssao.fs in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3D2138A0CFB000F6B55 /* f-ssao.fs */; };
+		1B77B3DB138A0CFB000F6B55 /* v-normal-depth.vs in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3D3138A0CFB000F6B55 /* v-normal-depth.vs */; };
+		1B77B3DC138A0CFB000F6B55 /* v-radblur.vs in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3D4138A0CFB000F6B55 /* v-radblur.vs */; };
+		1B77B3DD138A0CFB000F6B55 /* v-ssao-post.vs in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3D5138A0CFB000F6B55 /* v-ssao-post.vs */; };
+		1B77B3DE138A0CFB000F6B55 /* v-ssao.vs in Resources */ = {isa = PBXBuildFile; fileRef = 1B77B3D6138A0CFB000F6B55 /* v-ssao.vs */; };
+		1B8428D312909CF400F8B733 /* Texture.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B8428D112909CF400F8B733 /* Texture.cpp */; };
+		1B8429041290A39C00F8B733 /* noise.tga in Resources */ = {isa = PBXBuildFile; fileRef = 1B8429031290A39C00F8B733 /* noise.tga */; };
+		1B98EF6D12AA7103009745D0 /* GpRadialBlurShader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B98EF6C12AA7103009745D0 /* GpRadialBlurShader.cpp */; };
+		1B98F16612AA9C4A009745D0 /* GpPostShaderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B98F16512AA9C4A009745D0 /* GpPostShaderManager.cpp */; };
+		7244DD49122EF37700F2A6D2 /* GpObjectLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7244DD48122EF37700F2A6D2 /* GpObjectLoader.cpp */; };
+		7244DD56122EF4A200F2A6D2 /* GpObject3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7244DD55122EF4A200F2A6D2 /* GpObject3D.cpp */; };
+		72769122122E9E8C008BDD93 /* Gepeto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72769121122E9E8C008BDD93 /* Gepeto.cpp */; };
+		72EF7AED122FEB5400CB78E7 /* GpDraw.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72EF7AEC122FEB5400CB78E7 /* GpDraw.cpp */; };
+		72EF7B391230192D00CB78E7 /* GpWindow.c in Sources */ = {isa = PBXBuildFile; fileRef = 72EF7B381230192D00CB78E7 /* GpWindow.c */; };
+		72EF820D12317CEF00CB78E7 /* GpGlobal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72EF820C12317CEF00CB78E7 /* GpGlobal.cpp */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		002F39FD09D0883400EBEB88 /* Copy Frameworks into .app bundle */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				002F3A0009D0884600EBEB88 /* SDL.framework in Copy Frameworks into .app bundle */,
+			);
+			name = "Copy Frameworks into .app bundle";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		1B6E727D14A097030093563A /* gepeto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gepeto.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B6E728114A097030093563A /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		1B6E728414A097030093563A /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		1B6E728514A097030093563A /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		1B6E728614A097030093563A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		1B6E728914A097030093563A /* gepeto-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gepeto-Info.plist"; sourceTree = "<group>"; };
-		1B6E728D14A097030093563A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		1B6E729E14A097610093563A /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = Library/Frameworks/SDL.framework; sourceTree = SDKROOT; };
-		1B6E72A014A097660093563A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
-		1B6E72AA14A098180093563A /* Gepeto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gepeto.cpp; sourceTree = "<group>"; };
-		1B6E72AB14A098180093563A /* Gepeto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gepeto.h; sourceTree = "<group>"; };
-		1B6E72AD14A098230093563A /* Render.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Render.cpp; sourceTree = "<group>"; };
-		1B6E72AE14A098230093563A /* WindowManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WindowManager.cpp; sourceTree = "<group>"; };
-		1B6E72AF14A098230093563A /* Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Render.h; sourceTree = "<group>"; };
-		1B6E72B014A098230093563A /* WindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowManager.h; sourceTree = "<group>"; };
-		1B6E72B314A14E3A0093563A /* libglfw.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw.a; path = ../sys/libglfw.a; sourceTree = "<group>"; };
-		1B6E72B614A14F8E0093563A /* glfw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glfw.h; sourceTree = "<group>"; };
-		1B6E72B714A15A570093563A /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
-		1B6E72B814A172420093563A /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
-		1B6E72B914A1730A0093563A /* ResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceManager.cpp; sourceTree = "<group>"; };
-		1B6E72BF14A178860093563A /* Core.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Core.cpp; sourceTree = "<group>"; };
-		1B6E72C114A1797C0093563A /* gepeto-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gepeto-Prefix.pch"; sourceTree = "<group>"; };
-		1BC1897A14A414050038AD32 /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = SOURCE_ROOT; };
-		1BC1897B14A414050038AD32 /* CHANGELOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG; sourceTree = SOURCE_ROOT; };
+		002F39F909D0881F00EBEB88 /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = /Library/Frameworks/SDL.framework; sourceTree = "<absolute>"; };
+		002F3A2B09D0888800EBEB88 /* SDLMain.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = SDLMain.h; sourceTree = SOURCE_ROOT; };
+		002F3A2C09D0888800EBEB88 /* SDLMain.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = SDLMain.m; sourceTree = SOURCE_ROOT; };
+		002F3A3E09D088BA00EBEB88 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		002F3C0009D093BD00EBEB88 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
+		002F3C6009D0951E00EBEB88 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = ../../../../../../../../../../System/Library/Frameworks/GLUT.framework; sourceTree = SOURCE_ROOT; };
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		1B289AAD1288A721009E0E29 /* GpIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpIO.h; sourceTree = "<group>"; };
+		1B289AAE1288A721009E0E29 /* GpIO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GpIO.cpp; sourceTree = "<group>"; };
+		1B289ABE1288AA9A009E0E29 /* GpBaseShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpBaseShader.h; sourceTree = "<group>"; };
+		1B289ABF1288AA9A009E0E29 /* GpBaseShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GpBaseShader.cpp; sourceTree = "<group>"; };
+		1B48951312A2A0D100862C2A /* GpNormalDepthShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpNormalDepthShader.h; sourceTree = "<group>"; };
+		1B48951412A2A0D100862C2A /* GpNormalDepthShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GpNormalDepthShader.cpp; sourceTree = "<group>"; };
+		1B48952412A2A54500862C2A /* GpBasePostShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpBasePostShader.h; sourceTree = "<group>"; };
+		1B48952512A2A54500862C2A /* GpBasePostShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GpBasePostShader.cpp; sourceTree = "<group>"; };
+		1B48954D12A2B0F200862C2A /* GpSSAOShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpSSAOShader.h; sourceTree = "<group>"; };
+		1B48954E12A2B0F200862C2A /* GpSSAOShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GpSSAOShader.cpp; sourceTree = "<group>"; };
+		1B48957B12A459EC00862C2A /* GpFBO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpFBO.h; sourceTree = "<group>"; };
+		1B48957C12A459EC00862C2A /* GpFBO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GpFBO.cpp; sourceTree = "<group>"; };
+		1B77B3AD138968BB000F6B55 /* filesystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = filesystem.cpp; sourceTree = "<group>"; };
+		1B77B3AE138968BB000F6B55 /* filesystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = filesystem.h; sourceTree = "<group>"; };
+		1B77B3B4138A0C0E000F6B55 /* BEATTLE.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BEATTLE.obj; sourceTree = "<group>"; };
+		1B77B3B5138A0C0E000F6B55 /* CUBE_TRIANGLE.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CUBE_TRIANGLE.obj; sourceTree = "<group>"; };
+		1B77B3B6138A0C0E000F6B55 /* DUCKY.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = DUCKY.obj; sourceTree = "<group>"; };
+		1B77B3B7138A0C0E000F6B55 /* HALFCUBE.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HALFCUBE.obj; sourceTree = "<group>"; };
+		1B77B3B8138A0C0E000F6B55 /* HOUSE.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = HOUSE.obj; sourceTree = "<group>"; };
+		1B77B3B9138A0C0E000F6B55 /* MINICOOPER.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MINICOOPER.obj; sourceTree = "<group>"; };
+		1B77B3BA138A0C0E000F6B55 /* MONKEY.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MONKEY.obj; sourceTree = "<group>"; };
+		1B77B3BB138A0C0E000F6B55 /* MONKEY_PLAN_SCENE.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MONKEY_PLAN_SCENE.obj; sourceTree = "<group>"; };
+		1B77B3BC138A0C0E000F6B55 /* MONKEY_SMOTH.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MONKEY_SMOTH.obj; sourceTree = "<group>"; };
+		1B77B3BD138A0C0E000F6B55 /* MONKEY_SUBSURF.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MONKEY_SUBSURF.obj; sourceTree = "<group>"; };
+		1B77B3BE138A0C0E000F6B55 /* PLANE.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PLANE.obj; sourceTree = "<group>"; };
+		1B77B3BF138A0C0E000F6B55 /* RND_CUBES.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RND_CUBES.obj; sourceTree = "<group>"; };
+		1B77B3C0138A0C0E000F6B55 /* TORUS_SUPERSMOOTH.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TORUS_SUPERSMOOTH.obj; sourceTree = "<group>"; };
+		1B77B3CF138A0CFB000F6B55 /* f-normal-depth.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "f-normal-depth.fs"; sourceTree = "<group>"; };
+		1B77B3D0138A0CFB000F6B55 /* f-radblur.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "f-radblur.fs"; sourceTree = "<group>"; };
+		1B77B3D1138A0CFB000F6B55 /* f-ssao-post.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "f-ssao-post.fs"; sourceTree = "<group>"; };
+		1B77B3D2138A0CFB000F6B55 /* f-ssao.fs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "f-ssao.fs"; sourceTree = "<group>"; };
+		1B77B3D3138A0CFB000F6B55 /* v-normal-depth.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "v-normal-depth.vs"; sourceTree = "<group>"; };
+		1B77B3D4138A0CFB000F6B55 /* v-radblur.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "v-radblur.vs"; sourceTree = "<group>"; };
+		1B77B3D5138A0CFB000F6B55 /* v-ssao-post.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "v-ssao-post.vs"; sourceTree = "<group>"; };
+		1B77B3D6138A0CFB000F6B55 /* v-ssao.vs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "v-ssao.vs"; sourceTree = "<group>"; };
+		1B8428D112909CF400F8B733 /* Texture.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Texture.cpp; sourceTree = "<group>"; };
+		1B8428D212909CF400F8B733 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		1B8429031290A39C00F8B733 /* noise.tga */ = {isa = PBXFileReference; lastKnownFileType = file; path = noise.tga; sourceTree = "<group>"; };
+		1B98EF6B12AA7103009745D0 /* GpRadialBlurShader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpRadialBlurShader.h; sourceTree = "<group>"; };
+		1B98EF6C12AA7103009745D0 /* GpRadialBlurShader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GpRadialBlurShader.cpp; sourceTree = "<group>"; };
+		1B98F16412AA9C4A009745D0 /* GpPostShaderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpPostShaderManager.h; sourceTree = "<group>"; };
+		1B98F16512AA9C4A009745D0 /* GpPostShaderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GpPostShaderManager.cpp; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		7244DD47122EF37700F2A6D2 /* GpObjectLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpObjectLoader.h; sourceTree = "<group>"; };
+		7244DD48122EF37700F2A6D2 /* GpObjectLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GpObjectLoader.cpp; sourceTree = "<group>"; };
+		7244DD54122EF4A200F2A6D2 /* GpObject3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpObject3D.h; sourceTree = "<group>"; };
+		7244DD55122EF4A200F2A6D2 /* GpObject3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GpObject3D.cpp; sourceTree = "<group>"; };
+		72769120122E9E8C008BDD93 /* Gepeto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gepeto.h; sourceTree = "<group>"; };
+		72769121122E9E8C008BDD93 /* Gepeto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gepeto.cpp; sourceTree = "<group>"; };
+		72EF7AEB122FEB5400CB78E7 /* GpDraw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpDraw.h; sourceTree = "<group>"; };
+		72EF7AEC122FEB5400CB78E7 /* GpDraw.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GpDraw.cpp; sourceTree = "<group>"; };
+		72EF7B371230192D00CB78E7 /* GpWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpWindow.h; sourceTree = "<group>"; };
+		72EF7B381230192D00CB78E7 /* GpWindow.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GpWindow.c; sourceTree = "<group>"; };
+		72EF7D92123139F600CB78E7 /* GpGlobal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GpGlobal.h; sourceTree = "<group>"; };
+		72EF820C12317CEF00CB78E7 /* GpGlobal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GpGlobal.cpp; sourceTree = "<group>"; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* Gepeto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gepeto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1B6E727A14A097030093563A /* Frameworks */ = {
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B6E72A114A097660093563A /* OpenGL.framework in Frameworks */,
-				1B6E728214A097030093563A /* Cocoa.framework in Frameworks */,
-				1B6E72B414A14E3A0093563A /* libglfw.a in Frameworks */,
+				002F39FA09D0881F00EBEB88 /* SDL.framework in Frameworks */,
+				002F3C6109D0951E00EBEB88 /* GLUT.framework in Frameworks */,
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				002F3C0109D093BD00EBEB88 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B6E727214A097030093563A = {
+		080E96DDFE201D6D7F000001 /* SDL Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1B6E728714A097030093563A /* gepeto */,
-				1B6E728014A097030093563A /* Frameworks */,
-				1B6E727E14A097030093563A /* Products */,
+				002F3A2B09D0888800EBEB88 /* SDLMain.h */,
+				002F3A2C09D0888800EBEB88 /* SDLMain.m */,
 			);
+			name = "SDL Classes";
 			sourceTree = "<group>";
 		};
-		1B6E727E14A097030093563A /* Products */ = {
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B6E727D14A097030093563A /* gepeto.app */,
+				002F39F909D0881F00EBEB88 /* SDL.framework */,
+				002F3C6009D0951E00EBEB88 /* GLUT.framework */,
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				002F3C0009D093BD00EBEB88 /* OpenGL.framework */,
 			);
-			name = Products;
+			name = "Linked Frameworks";
 			sourceTree = "<group>";
 		};
-		1B6E728014A097030093563A /* Frameworks */ = {
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B6E72A014A097660093563A /* OpenGL.framework */,
-				1B6E729E14A097610093563A /* SDL.framework */,
-				1B6E728114A097030093563A /* Cocoa.framework */,
-				1B6E728314A097030093563A /* Other Frameworks */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1B6E728314A097030093563A /* Other Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				1B6E728414A097030093563A /* AppKit.framework */,
-				1B6E728514A097030093563A /* CoreData.framework */,
-				1B6E728614A097030093563A /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
 			);
 			name = "Other Frameworks";
 			sourceTree = "<group>";
 		};
-		1B6E728714A097030093563A /* gepeto */ = {
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1B6E72B514A14F8E0093563A /* GL */,
-				1B6E72A514A098050093563A /* sys */,
-				1B6E72A214A097C10093563A /* gp */,
-				1B6E728814A097030093563A /* Supporting Files */,
+				8D1107320486CEB800E47090 /* Gepeto.app */,
 			);
-			path = gepeto;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		1B6E728814A097030093563A /* Supporting Files */ = {
+		1B48951212A2A0AE00862C2A /* shaders */ = {
 			isa = PBXGroup;
 			children = (
-				1BC1897A14A414050038AD32 /* README.markdown */,
-				1BC1897B14A414050038AD32 /* CHANGELOG */,
-				1B6E72C114A1797C0093563A /* gepeto-Prefix.pch */,
-				1B6E728914A097030093563A /* gepeto-Info.plist */,
-				1B6E728D14A097030093563A /* main.cpp */,
+				1B98F16412AA9C4A009745D0 /* GpPostShaderManager.h */,
+				1B98F16512AA9C4A009745D0 /* GpPostShaderManager.cpp */,
+				1B48955012A2B0FA00862C2A /* Base */,
+				1B48951312A2A0D100862C2A /* GpNormalDepthShader.h */,
+				1B48951412A2A0D100862C2A /* GpNormalDepthShader.cpp */,
+				1B48954D12A2B0F200862C2A /* GpSSAOShader.h */,
+				1B48954E12A2B0F200862C2A /* GpSSAOShader.cpp */,
+				1B98EF6B12AA7103009745D0 /* GpRadialBlurShader.h */,
+				1B98EF6C12AA7103009745D0 /* GpRadialBlurShader.cpp */,
 			);
-			name = "Supporting Files";
+			name = shaders;
 			sourceTree = "<group>";
 		};
-		1B6E72A214A097C10093563A /* gp */ = {
+		1B48955012A2B0FA00862C2A /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				1B6E72AA14A098180093563A /* Gepeto.cpp */,
-				1B6E72AB14A098180093563A /* Gepeto.h */,
-				1B6E72A314A097C10093563A /* assets */,
-				1B6E72A414A097C10093563A /* render */,
-				1B6E72B714A15A570093563A /* Core.h */,
-				1B6E72BF14A178860093563A /* Core.cpp */,
-				1B6E72B814A172420093563A /* ResourceManager.h */,
-				1B6E72B914A1730A0093563A /* ResourceManager.cpp */,
+				1B289ABE1288AA9A009E0E29 /* GpBaseShader.h */,
+				1B289ABF1288AA9A009E0E29 /* GpBaseShader.cpp */,
+				1B48952412A2A54500862C2A /* GpBasePostShader.h */,
+				1B48952512A2A54500862C2A /* GpBasePostShader.cpp */,
 			);
-			path = gp;
+			name = Base;
 			sourceTree = "<group>";
 		};
-		1B6E72A314A097C10093563A /* assets */ = {
+		1B77B3AC138968BA000F6B55 /* system_assets */ = {
 			isa = PBXGroup;
 			children = (
+				1B77B3AD138968BB000F6B55 /* filesystem.cpp */,
+				1B77B3AE138968BB000F6B55 /* filesystem.h */,
 			);
-			path = assets;
+			path = system_assets;
 			sourceTree = "<group>";
 		};
-		1B6E72A414A097C10093563A /* render */ = {
+		1B77B3B3138A0C0E000F6B55 /* objmodels */ = {
 			isa = PBXGroup;
 			children = (
-				1B6E72B014A098230093563A /* WindowManager.h */,
-				1B6E72AE14A098230093563A /* WindowManager.cpp */,
-				1B6E72AF14A098230093563A /* Render.h */,
-				1B6E72AD14A098230093563A /* Render.cpp */,
+				1B77B3B4138A0C0E000F6B55 /* BEATTLE.obj */,
+				1B77B3B5138A0C0E000F6B55 /* CUBE_TRIANGLE.obj */,
+				1B77B3B6138A0C0E000F6B55 /* DUCKY.obj */,
+				1B77B3B7138A0C0E000F6B55 /* HALFCUBE.obj */,
+				1B77B3B8138A0C0E000F6B55 /* HOUSE.obj */,
+				1B77B3B9138A0C0E000F6B55 /* MINICOOPER.obj */,
+				1B77B3BA138A0C0E000F6B55 /* MONKEY.obj */,
+				1B77B3BB138A0C0E000F6B55 /* MONKEY_PLAN_SCENE.obj */,
+				1B77B3BC138A0C0E000F6B55 /* MONKEY_SMOTH.obj */,
+				1B77B3BD138A0C0E000F6B55 /* MONKEY_SUBSURF.obj */,
+				1B77B3BE138A0C0E000F6B55 /* PLANE.obj */,
+				1B77B3BF138A0C0E000F6B55 /* RND_CUBES.obj */,
+				1B77B3C0138A0C0E000F6B55 /* TORUS_SUPERSMOOTH.obj */,
 			);
-			path = render;
+			path = objmodels;
 			sourceTree = "<group>";
 		};
-		1B6E72A514A098050093563A /* sys */ = {
+		1B77B3CE138A0CFB000F6B55 /* shaders */ = {
 			isa = PBXGroup;
 			children = (
+				1B949BE6138B4AB4008F0B4B /* normal-depth */,
+				1B949BE7138B4AB8008F0B4B /* radblur */,
+				1B949BE8138B4ABC008F0B4B /* ssao-post */,
+				1B949BE9138B4AC0008F0B4B /* ssao */,
 			);
-			path = sys;
+			path = shaders;
 			sourceTree = "<group>";
 		};
-		1B6E72B514A14F8E0093563A /* GL */ = {
+		1B8428CE12909CD900F8B733 /* ExternsCpp */ = {
 			isa = PBXGroup;
 			children = (
-				1B6E72B614A14F8E0093563A /* glfw.h */,
-				1B6E72B314A14E3A0093563A /* libglfw.a */,
+				1B8428D112909CF400F8B733 /* Texture.cpp */,
+				1B8428D212909CF400F8B733 /* Texture.h */,
 			);
-			path = GL;
+			name = ExternsCpp;
+			sourceTree = "<group>";
+		};
+		1B949BE6138B4AB4008F0B4B /* normal-depth */ = {
+			isa = PBXGroup;
+			children = (
+				1B77B3CF138A0CFB000F6B55 /* f-normal-depth.fs */,
+				1B77B3D3138A0CFB000F6B55 /* v-normal-depth.vs */,
+			);
+			name = "normal-depth";
+			sourceTree = "<group>";
+		};
+		1B949BE7138B4AB8008F0B4B /* radblur */ = {
+			isa = PBXGroup;
+			children = (
+				1B77B3D0138A0CFB000F6B55 /* f-radblur.fs */,
+				1B77B3D4138A0CFB000F6B55 /* v-radblur.vs */,
+			);
+			name = radblur;
+			sourceTree = "<group>";
+		};
+		1B949BE8138B4ABC008F0B4B /* ssao-post */ = {
+			isa = PBXGroup;
+			children = (
+				1B77B3D1138A0CFB000F6B55 /* f-ssao-post.fs */,
+				1B77B3D5138A0CFB000F6B55 /* v-ssao-post.vs */,
+			);
+			name = "ssao-post";
+			sourceTree = "<group>";
+		};
+		1B949BE9138B4AC0008F0B4B /* ssao */ = {
+			isa = PBXGroup;
+			children = (
+				1B77B3D2138A0CFB000F6B55 /* f-ssao.fs */,
+				1B77B3D6138A0CFB000F6B55 /* v-ssao.vs */,
+			);
+			name = ssao;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* ___PROJECTNAMEASXML___ */ = {
+			isa = PBXGroup;
+			children = (
+				1B8428CE12909CD900F8B733 /* ExternsCpp */,
+				7276911F122E9E56008BDD93 /* Classes */,
+				080E96DDFE201D6D7F000001 /* SDL Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = "___PROJECTNAMEASXML___";
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				002F3A3E09D088BA00EBEB88 /* main.cpp */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1B77B3CE138A0CFB000F6B55 /* shaders */,
+				1B77B3B3138A0C0E000F6B55 /* objmodels */,
+				1B8429031290A39C00F8B733 /* noise.tga */,
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7276911F122E9E56008BDD93 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1B77B3AC138968BA000F6B55 /* system_assets */,
+				72769120122E9E8C008BDD93 /* Gepeto.h */,
+				72769121122E9E8C008BDD93 /* Gepeto.cpp */,
+				7244DD47122EF37700F2A6D2 /* GpObjectLoader.h */,
+				7244DD48122EF37700F2A6D2 /* GpObjectLoader.cpp */,
+				7244DD54122EF4A200F2A6D2 /* GpObject3D.h */,
+				7244DD55122EF4A200F2A6D2 /* GpObject3D.cpp */,
+				72EF7AEB122FEB5400CB78E7 /* GpDraw.h */,
+				72EF7AEC122FEB5400CB78E7 /* GpDraw.cpp */,
+				72EF7B371230192D00CB78E7 /* GpWindow.h */,
+				72EF7B381230192D00CB78E7 /* GpWindow.c */,
+				72EF7D92123139F600CB78E7 /* GpGlobal.h */,
+				72EF820C12317CEF00CB78E7 /* GpGlobal.cpp */,
+				1B289AAD1288A721009E0E29 /* GpIO.h */,
+				1B289AAE1288A721009E0E29 /* GpIO.cpp */,
+				1B48951212A2A0AE00862C2A /* shaders */,
+				1B48957B12A459EC00862C2A /* GpFBO.h */,
+				1B48957C12A459EC00862C2A /* GpFBO.cpp */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1B6E727C14A097030093563A /* gepeto */ = {
+		8D1107260486CEB800E47090 /* Gepeto */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B6E729B14A097040093563A /* Build configuration list for PBXNativeTarget "gepeto" */;
+			buildConfigurationList = C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Gepeto" */;
 			buildPhases = (
-				1B6E727914A097030093563A /* Sources */,
-				1B6E727A14A097030093563A /* Frameworks */,
-				1B6E727B14A097030093563A /* Resources */,
+				8D1107290486CEB800E47090 /* Resources */,
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				002F39FD09D0883400EBEB88 /* Copy Frameworks into .app bundle */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = gepeto;
-			productName = gepeto;
-			productReference = 1B6E727D14A097030093563A /* gepeto.app */;
+			name = Gepeto;
+			productInstallPath = "$(HOME)/Applications";
+			productName = "___PROJECTNAME___";
+			productReference = 8D1107320486CEB800E47090 /* Gepeto.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		1B6E727414A097030093563A /* Project object */ = {
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
-			attributes = {
-				LastUpgradeCheck = 0420;
-			};
-			buildConfigurationList = 1B6E727714A097030093563A /* Build configuration list for PBXProject "gepeto" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GEPETO" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
-			hasScannedForEncodings = 0;
+			hasScannedForEncodings = 1;
 			knownRegions = (
-				en,
+				English,
+				Japanese,
+				French,
+				German,
 			);
-			mainGroup = 1B6E727214A097030093563A;
-			productRefGroup = 1B6E727E14A097030093563A /* Products */;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* ___PROJECTNAMEASXML___ */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1B6E727C14A097030093563A /* gepeto */,
+				8D1107260486CEB800E47090 /* Gepeto */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1B6E727B14A097030093563A /* Resources */ = {
+		8D1107290486CEB800E47090 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BC1897C14A414050038AD32 /* README.markdown in Resources */,
-				1BC1897D14A414050038AD32 /* CHANGELOG in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				1B8429041290A39C00F8B733 /* noise.tga in Resources */,
+				1B77B3C1138A0C0E000F6B55 /* BEATTLE.obj in Resources */,
+				1B77B3C2138A0C0E000F6B55 /* CUBE_TRIANGLE.obj in Resources */,
+				1B77B3C3138A0C0E000F6B55 /* DUCKY.obj in Resources */,
+				1B77B3C4138A0C0E000F6B55 /* HALFCUBE.obj in Resources */,
+				1B77B3C5138A0C0E000F6B55 /* HOUSE.obj in Resources */,
+				1B77B3C6138A0C0E000F6B55 /* MINICOOPER.obj in Resources */,
+				1B77B3C7138A0C0E000F6B55 /* MONKEY.obj in Resources */,
+				1B77B3C8138A0C0E000F6B55 /* MONKEY_PLAN_SCENE.obj in Resources */,
+				1B77B3C9138A0C0E000F6B55 /* MONKEY_SMOTH.obj in Resources */,
+				1B77B3CA138A0C0E000F6B55 /* MONKEY_SUBSURF.obj in Resources */,
+				1B77B3CB138A0C0E000F6B55 /* PLANE.obj in Resources */,
+				1B77B3CC138A0C0E000F6B55 /* RND_CUBES.obj in Resources */,
+				1B77B3CD138A0C0E000F6B55 /* TORUS_SUPERSMOOTH.obj in Resources */,
+				1B77B3D7138A0CFB000F6B55 /* f-normal-depth.fs in Resources */,
+				1B77B3D8138A0CFB000F6B55 /* f-radblur.fs in Resources */,
+				1B77B3D9138A0CFB000F6B55 /* f-ssao-post.fs in Resources */,
+				1B77B3DA138A0CFB000F6B55 /* f-ssao.fs in Resources */,
+				1B77B3DB138A0CFB000F6B55 /* v-normal-depth.vs in Resources */,
+				1B77B3DC138A0CFB000F6B55 /* v-radblur.vs in Resources */,
+				1B77B3DD138A0CFB000F6B55 /* v-ssao-post.vs in Resources */,
+				1B77B3DE138A0CFB000F6B55 /* v-ssao.vs in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		1B6E727914A097030093563A /* Sources */ = {
+		8D11072C0486CEB800E47090 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B6E728E14A097030093563A /* main.cpp in Sources */,
-				1B6E72AC14A098180093563A /* Gepeto.cpp in Sources */,
-				1B6E72B114A098230093563A /* Render.cpp in Sources */,
-				1B6E72B214A098230093563A /* WindowManager.cpp in Sources */,
-				1B6E72BA14A1730A0093563A /* ResourceManager.cpp in Sources */,
-				1B6E72C014A178870093563A /* Core.cpp in Sources */,
+				002F3A2E09D0888800EBEB88 /* SDLMain.m in Sources */,
+				002F3A3F09D088BA00EBEB88 /* main.cpp in Sources */,
+				72769122122E9E8C008BDD93 /* Gepeto.cpp in Sources */,
+				7244DD49122EF37700F2A6D2 /* GpObjectLoader.cpp in Sources */,
+				7244DD56122EF4A200F2A6D2 /* GpObject3D.cpp in Sources */,
+				72EF7AED122FEB5400CB78E7 /* GpDraw.cpp in Sources */,
+				72EF7B391230192D00CB78E7 /* GpWindow.c in Sources */,
+				72EF820D12317CEF00CB78E7 /* GpGlobal.cpp in Sources */,
+				1B289AAF1288A721009E0E29 /* GpIO.cpp in Sources */,
+				1B289AC01288AA9A009E0E29 /* GpBaseShader.cpp in Sources */,
+				1B8428D312909CF400F8B733 /* Texture.cpp in Sources */,
+				1B48951512A2A0D100862C2A /* GpNormalDepthShader.cpp in Sources */,
+				1B48952612A2A54500862C2A /* GpBasePostShader.cpp in Sources */,
+				1B48954F12A2B0F200862C2A /* GpSSAOShader.cpp in Sources */,
+				1B48957D12A459EC00862C2A /* GpFBO.cpp in Sources */,
+				1B98EF6D12AA7103009745D0 /* GpRadialBlurShader.cpp in Sources */,
+				1B98F16612AA9C4A009745D0 /* GpPostShaderManager.cpp in Sources */,
+				1B77B3AF138968BB000F6B55 /* filesystem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		1B6E729914A097040093563A /* Debug */ = {
+		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = macosx;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "___PROJECTNAMEASIDENTIFIER____Prefix.pch";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Gepeto;
+				SDKROOT = macosx10.6;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
-		1B6E729A14A097040093563A /* Release */ = {
+		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				COPY_PHASE_STRIP = YES;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.7;
-				SDKROOT = macosx;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_MODEL_TUNING = G5;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "___PROJECTNAMEASIDENTIFIER____Prefix.pch";
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = Gepeto_Release;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		1B6E729C14A097040093563A /* Debug */ = {
+		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "gepeto/gepeto-Prefix.pch";
-				INFOPLIST_FILE = "gepeto/gepeto-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/gepeto/sys\"",
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks",
+					/Library/Frameworks,
+					"$(FRAMEWORK_SEARCH_PATHS)",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/SDL.framework/Headers",
+					/Library/Frameworks/SDL.framework/Headers,
+					"$(HEADER_SEARCH_PATHS)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+				"SDKROOT[arch=x86_64]" = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Debug;
 		};
-		1B6E729D14A097040093563A /* Release */ = {
+		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "gepeto/gepeto-Prefix.pch";
-				INFOPLIST_FILE = "gepeto/gepeto-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/gepeto/sys\"",
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks",
+					/Library/Frameworks,
+					"$(FRAMEWORK_SEARCH_PATHS)",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				"GCC_VERSION[arch=x86_64]" = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(HOME)/Library/Frameworks/SDL.framework/Headers",
+					/Library/Frameworks/SDL.framework/Headers,
+					"$(HEADER_SEARCH_PATHS)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PREBINDING = NO;
+				SDKROOT = macosx;
+				"SDKROOT[arch=x86_64]" = "$(DEVELOPER_SDK_DIR)/MacOSX10.6.sdk";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1B6E727714A097030093563A /* Build configuration list for PBXProject "gepeto" */ = {
+		C01FCF4A08A954540054247B /* Build configuration list for PBXNativeTarget "Gepeto" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B6E729914A097040093563A /* Debug */,
-				1B6E729A14A097040093563A /* Release */,
+				C01FCF4B08A954540054247B /* Debug */,
+				C01FCF4C08A954540054247B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B6E729B14A097040093563A /* Build configuration list for PBXNativeTarget "gepeto" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "GEPETO" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B6E729C14A097040093563A /* Debug */,
-				1B6E729D14A097040093563A /* Release */,
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 1B6E727414A097030093563A /* Project object */;
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
 }

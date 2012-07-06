@@ -19,14 +19,22 @@
 class Gepeto {
     
 public:
+    Gepeto(int argc, char **argv) 
+    {
+        _argc = argc;
+        _argv = argv;
+    }
+    
     void start();
     
-    // ===========
-    // Configuring
-    // ===========
+    // =============
+    // Configuration
+    // =============
     void setResolution(int width, int height);
     void setFullScreen(bool fullscreen);
 private:
+    int _argc;
+    char **_argv;
     ResourceManager _manager;
 };
 

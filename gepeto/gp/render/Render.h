@@ -13,8 +13,8 @@ class Render {
 public:
     Render();
     void draw();
-    void clearScreen();
-    void clearScreenColor(float red, float green, float blue, float alpha);
+    void inline clearScreen();
+    void inline clearScreenColor(float red, float green, float blue, float alpha);
     
 private:
     float _red, _green, _blue, _alpha;

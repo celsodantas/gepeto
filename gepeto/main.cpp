@@ -11,7 +11,7 @@
 
 int main(int argc, char **argv)
 {    
-    Gepeto gepeto;
+    Gepeto gepeto(argc, argv);
     gepeto.start();
     
     return 0;

@@ -23,6 +23,15 @@ void Render::draw()
     clearScreen();
     clearScreenColor(_red, _green, _blue, _alpha);
     
+    glLoadIdentity();
+    
+    glColor3f(1.0f,0.1f,0.0f);
+    
+    glBegin(GL_TRIANGLES); // Drawing Using Triangles
+        glVertex3f( 0.0f, 1.0f, 0.0f);              // Top
+        glVertex3f(-1.0f,-1.0f, 0.0f);              // Bottom Left
+        glVertex3f( 1.0f,-1.0f, 0.0f);              // Bottom Right
+    glEnd();                            // Finished Drawing The Triangle
 }
 
 void Render::clearScreen()

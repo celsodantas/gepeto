@@ -10,9 +10,6 @@
 #include "ResourceManager.h"
 #include "render/Render.h"
 
-// REMOVE ABOVE! IT SHOULD NOT BE HERE!!
-#include "../GL/glfw.h"
-
 Core::Core(ResourceManager *manager)
 {
     _manager = manager;

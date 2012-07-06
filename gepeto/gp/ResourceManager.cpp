@@ -10,7 +10,7 @@
 #include "Core.h"
 #include "render/Render.h"
 
-
+#include "GLFWAdapter.h"
 
 int ResourceManager::init()
 {
@@ -22,11 +22,10 @@ int ResourceManager::init()
 
 void ResourceManager::start()
 {
-    _windowManager  = new WindowManager();
+    _windowManager  = new WindowManager(new GLFWAdapter);
     _render         = new Render();
     _core           = new Core(this);
     
-    _core->setResourceManager(this);
     _core->setRender         (_render);
     
     _windowManager->openWindow();

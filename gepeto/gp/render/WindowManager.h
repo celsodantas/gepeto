@@ -9,10 +9,11 @@
 #ifndef __gp_window_manager_h
 #define __gp_window_manager_h
 
+#include "WindowManagerAdapter.h"
 
 class WindowManager {
 public: 
-    WindowManager();
+    WindowManager(WindowManagerAdapter *adapter);
     ~WindowManager();
     void setWindowSize(int width, int height);
     int  openWindow();
@@ -21,6 +22,7 @@ public:
 private:
     void closeWindow();
     
+    WindowManagerAdapter *_adapter;
     int _widthRes, _heightRes;
     int _mode;
 };

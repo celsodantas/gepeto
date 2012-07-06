@@ -18,7 +18,6 @@ public:
     Core(ResourceManager *manager);
     void loop();
     
-    void setResourceManager(ResourceManager *manager)   { _manager = manager; }
     void setRender(Render *render)                      { _render = render; }
 private:
     void swapBuffers();

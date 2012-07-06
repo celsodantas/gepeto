@@ -18,6 +18,7 @@
 		1B6E72BC14A176210093563A /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = 1B6E72BB14A176210093563A /* CHANGELOG */; };
 		1B6E72BE14A1768B0093563A /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 1B6E72BD14A1768B0093563A /* README.markdown */; };
 		1B6E72C014A178870093563A /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72BF14A178860093563A /* Core.cpp */; };
+		72FD034015A72B640039FA4C /* GLFWAdapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72FD033F15A72B640039FA4C /* GLFWAdapter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,9 @@
 		1B6E72BD14A1768B0093563A /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		1B6E72BF14A178860093563A /* Core.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Core.cpp; sourceTree = "<group>"; };
 		1B6E72C114A1797C0093563A /* gepeto-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gepeto-Prefix.pch"; sourceTree = "<group>"; };
+		72FD033D15A72AB60039FA4C /* WindowManagerAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowManagerAdapter.h; sourceTree = "<group>"; };
+		72FD033E15A72AD80039FA4C /* GLFWAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLFWAdapter.h; sourceTree = "<group>"; };
+		72FD033F15A72B640039FA4C /* GLFWAdapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLFWAdapter.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,7 @@
 		1B6E72A414A097C10093563A /* render */ = {
 			isa = PBXGroup;
 			children = (
+				72FD033C15A72AAD0039FA4C /* adapters */,
 				1B6E72B014A098230093563A /* WindowManager.h */,
 				1B6E72AE14A098230093563A /* WindowManager.cpp */,
 				1B6E72AF14A098230093563A /* Render.h */,
@@ -169,6 +174,16 @@
 				1B6E72B314A14E3A0093563A /* libglfw.a */,
 			);
 			path = GL;
+			sourceTree = "<group>";
+		};
+		72FD033C15A72AAD0039FA4C /* adapters */ = {
+			isa = PBXGroup;
+			children = (
+				72FD033D15A72AB60039FA4C /* WindowManagerAdapter.h */,
+				72FD033E15A72AD80039FA4C /* GLFWAdapter.h */,
+				72FD033F15A72B640039FA4C /* GLFWAdapter.cpp */,
+			);
+			name = adapters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +254,7 @@
 				1B6E72B214A098230093563A /* WindowManager.cpp in Sources */,
 				1B6E72BA14A1730A0093563A /* ResourceManager.cpp in Sources */,
 				1B6E72C014A178870093563A /* Core.cpp in Sources */,
+				72FD034015A72B640039FA4C /* GLFWAdapter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +355,7 @@
 				1B6E729D14A097040093563A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

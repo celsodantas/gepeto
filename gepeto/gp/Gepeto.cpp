@@ -11,9 +11,14 @@
 // =======================
 // Starts Gepeto framework  
 // =======================
+
+Gepeto* Gepeto::_gepeto;
+
 void Gepeto::start() {
-    _manager.init();
+    Gepeto::_gepeto = this;
     
+    _manager.init();
+
     //
     // If in need to make any pre-star configuration, 
     // do it here! Just add it before _manager.init()

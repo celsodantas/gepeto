@@ -22,7 +22,7 @@ int  GLFWAdapter::openWindow(int width, int height)
         exit( EXIT_FAILURE );
     }
     
-    if ( glfwOpenWindow(width, height, 0, 0, 0, 0, 0, 0, _mode) < 0) 
+    if ( glfwOpenWindow(width, height, 0, 0, 0, 0, 16, 0, _mode) < 0) 
     {
         closeWindow();
         std::cout << "Error opening windows glfwOpenWindow() in " << __FILE__ << ":" << __LINE__ << std::endl;

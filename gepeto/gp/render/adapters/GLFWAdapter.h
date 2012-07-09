@@ -11,7 +11,7 @@
 
 #include "WindowManagerAdapter.h"
 #include "opengl/gl.h"
-#include "../../GL/glfw.h"
+#include "../../../libs/glfw.h"     // TODO:: Fix this long "..." path
 
 class GLFWAdapter: public WindowManagerAdapter
 {

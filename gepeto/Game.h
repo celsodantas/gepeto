@@ -9,6 +9,30 @@
 #ifndef gepeto_Game_h
 #define gepeto_Game_h
 
+#include <iostream>
+#include "Gepeto.h"
+
+#define GAME_CLASS Game
+
+///////////////
+//
+// TODO: Move this to an external project
+//
+///////////////
+
+class Game
+{
+public:
+    
+    Game(Gepeto *gepeto);
+
+    void setup();    
+    void frame(double delta);
+    
+private:
+    Gepeto *_gepeto;
+};
+
 
 
 #endif

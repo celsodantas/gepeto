@@ -22,17 +22,20 @@ int ResourceManager::init()
 
 void ResourceManager::start()
 {
+    GAMECLASS game(&Gepeto::instance());
     _windowManager  = new WindowManager(new GLFWAdapter);
+    _windowManager->openWindow();
+    
     _render         = new Render();
     _core           = new Core(this);
     
-    _core->setRender         (_render);
+    _core->setRender(_render);
+
+    game.setup();
     
-    _windowManager->openWindow();
-    _core->loop();
+    _core->loop(game);
 }
 
-#include "../GL/glfw.h"
 void ResourceManager::swapBuffers()
 {
     glfwSwapBuffers();

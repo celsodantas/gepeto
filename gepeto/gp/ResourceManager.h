@@ -13,11 +13,13 @@
 
 class Core;
 class Render;
+class Gepeto;
 
 class ResourceManager {
 public:
     ResourceManager() {}
-    int init();
+    ~ResourceManager();
+    int  init();
     void start();
     
     void swapBuffers();

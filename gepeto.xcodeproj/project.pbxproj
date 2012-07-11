@@ -13,12 +13,15 @@
 		1B6E72AC14A098180093563A /* Gepeto.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72AA14A098180093563A /* Gepeto.cpp */; };
 		1B6E72B114A098230093563A /* Render.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72AD14A098230093563A /* Render.cpp */; };
 		1B6E72B214A098230093563A /* WindowManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72AE14A098230093563A /* WindowManager.cpp */; };
-		1B6E72B414A14E3A0093563A /* libglfw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B6E72B314A14E3A0093563A /* libglfw.a */; };
 		1B6E72BA14A1730A0093563A /* ResourceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72B914A1730A0093563A /* ResourceManager.cpp */; };
 		1B6E72BC14A176210093563A /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = 1B6E72BB14A176210093563A /* CHANGELOG */; };
 		1B6E72BE14A1768B0093563A /* README.markdown in Resources */ = {isa = PBXBuildFile; fileRef = 1B6E72BD14A1768B0093563A /* README.markdown */; };
 		1B6E72C014A178870093563A /* Core.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B6E72BF14A178860093563A /* Core.cpp */; };
-		72FD034015A72B640039FA4C /* GLFWAdapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72FD033F15A72B640039FA4C /* GLFWAdapter.cpp */; };
+		7266580015AA0186000BE0D4 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 726657FF15AA0186000BE0D4 /* Game.cpp */; };
+		72A37E2315AB02F100A9FBB8 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72A37E2115AB01BF00A9FBB8 /* tinyxml2.cpp */; };
+		72A37E2715AB1FDF00A9FBB8 /* GLFWAdapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72A37E2415AB1FDF00A9FBB8 /* GLFWAdapter.cpp */; };
+		72FD035715A7DEFA0039FA4C /* libglfw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FD035615A7DEFA0039FA4C /* libglfw.a */; };
+		72FD035D15A9D2640039FA4C /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72FD035B15A9D2630039FA4C /* Camera.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +32,6 @@
 		1B6E728614A097030093563A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1B6E728914A097030093563A /* gepeto-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "gepeto-Info.plist"; sourceTree = "<group>"; };
 		1B6E728D14A097030093563A /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		1B6E729E14A097610093563A /* SDL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SDL.framework; path = Library/Frameworks/SDL.framework; sourceTree = SDKROOT; };
 		1B6E72A014A097660093563A /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
 		1B6E72AA14A098180093563A /* Gepeto.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gepeto.cpp; sourceTree = "<group>"; };
 		1B6E72AB14A098180093563A /* Gepeto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gepeto.h; sourceTree = "<group>"; };
@@ -37,8 +39,6 @@
 		1B6E72AE14A098230093563A /* WindowManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = WindowManager.cpp; sourceTree = "<group>"; };
 		1B6E72AF14A098230093563A /* Render.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Render.h; sourceTree = "<group>"; };
 		1B6E72B014A098230093563A /* WindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowManager.h; sourceTree = "<group>"; };
-		1B6E72B314A14E3A0093563A /* libglfw.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw.a; path = ../sys/libglfw.a; sourceTree = "<group>"; };
-		1B6E72B614A14F8E0093563A /* glfw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glfw.h; sourceTree = "<group>"; };
 		1B6E72B714A15A570093563A /* Core.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Core.h; sourceTree = "<group>"; };
 		1B6E72B814A172420093563A /* ResourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourceManager.h; sourceTree = "<group>"; };
 		1B6E72B914A1730A0093563A /* ResourceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourceManager.cpp; sourceTree = "<group>"; };
@@ -46,9 +46,19 @@
 		1B6E72BD14A1768B0093563A /* README.markdown */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.markdown; sourceTree = "<group>"; };
 		1B6E72BF14A178860093563A /* Core.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Core.cpp; sourceTree = "<group>"; };
 		1B6E72C114A1797C0093563A /* gepeto-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "gepeto-Prefix.pch"; sourceTree = "<group>"; };
-		72FD033D15A72AB60039FA4C /* WindowManagerAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WindowManagerAdapter.h; sourceTree = "<group>"; };
-		72FD033E15A72AD80039FA4C /* GLFWAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLFWAdapter.h; sourceTree = "<group>"; };
-		72FD033F15A72B640039FA4C /* GLFWAdapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GLFWAdapter.cpp; sourceTree = "<group>"; };
+		726657FF15AA0186000BE0D4 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		7266580215AA09E5000BE0D4 /* Util.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
+		7266580615AA0AB3000BE0D4 /* UtilAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = UtilAdapter.h; path = sys/macos/UtilAdapter.h; sourceTree = "<group>"; };
+		72A37E2115AB01BF00A9FBB8 /* tinyxml2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml2.cpp; sourceTree = "<group>"; };
+		72A37E2215AB01BF00A9FBB8 /* tinyxml2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tinyxml2.h; sourceTree = "<group>"; };
+		72A37E2415AB1FDF00A9FBB8 /* GLFWAdapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLFWAdapter.cpp; path = adapters/GLFWAdapter.cpp; sourceTree = "<group>"; };
+		72A37E2515AB1FDF00A9FBB8 /* GLFWAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLFWAdapter.h; path = adapters/GLFWAdapter.h; sourceTree = "<group>"; };
+		72A37E2615AB1FDF00A9FBB8 /* WindowManagerAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowManagerAdapter.h; path = adapters/WindowManagerAdapter.h; sourceTree = "<group>"; };
+		72FD035515A7DEFA0039FA4C /* glfw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glfw.h; sourceTree = "<group>"; };
+		72FD035615A7DEFA0039FA4C /* libglfw.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libglfw.a; sourceTree = "<group>"; };
+		72FD035B15A9D2630039FA4C /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		72FD035C15A9D2640039FA4C /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		72FD036215A9EF910039FA4C /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +68,7 @@
 			files = (
 				1B6E72A114A097660093563A /* OpenGL.framework in Frameworks */,
 				1B6E728214A097030093563A /* Cocoa.framework in Frameworks */,
-				1B6E72B414A14E3A0093563A /* libglfw.a in Frameworks */,
+				72FD035715A7DEFA0039FA4C /* libglfw.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				1B6E72A014A097660093563A /* OpenGL.framework */,
-				1B6E729E14A097610093563A /* SDL.framework */,
 				1B6E728114A097030093563A /* Cocoa.framework */,
 				1B6E728314A097030093563A /* Other Frameworks */,
 			);
@@ -106,8 +115,8 @@
 		1B6E728714A097030093563A /* gepeto */ = {
 			isa = PBXGroup;
 			children = (
-				1B6E72B514A14F8E0093563A /* GL */,
-				1B6E72A514A098050093563A /* sys */,
+				726657FB15A9FDC2000BE0D4 /* game */,
+				72FD034915A7DAC00039FA4C /* libs */,
 				1B6E72A214A097C10093563A /* gp */,
 				1B6E728814A097030093563A /* Supporting Files */,
 			);
@@ -129,6 +138,9 @@
 		1B6E72A214A097C10093563A /* gp */ = {
 			isa = PBXGroup;
 			children = (
+				7266580115AA09CC000BE0D4 /* utils */,
+				72FD035B15A9D2630039FA4C /* Camera.cpp */,
+				72FD035C15A9D2640039FA4C /* Camera.h */,
 				1B6E72AA14A098180093563A /* Gepeto.cpp */,
 				1B6E72AB14A098180093563A /* Gepeto.h */,
 				1B6E72A314A097C10093563A /* assets */,
@@ -160,30 +172,67 @@
 			path = render;
 			sourceTree = "<group>";
 		};
-		1B6E72A514A098050093563A /* sys */ = {
+		726657FB15A9FDC2000BE0D4 /* game */ = {
 			isa = PBXGroup;
 			children = (
+				726657FF15AA0186000BE0D4 /* Game.cpp */,
+				72FD036215A9EF910039FA4C /* Game.h */,
 			);
-			path = sys;
+			name = game;
 			sourceTree = "<group>";
 		};
-		1B6E72B514A14F8E0093563A /* GL */ = {
+		7266580115AA09CC000BE0D4 /* utils */ = {
 			isa = PBXGroup;
 			children = (
-				1B6E72B614A14F8E0093563A /* glfw.h */,
-				1B6E72B314A14E3A0093563A /* libglfw.a */,
+				7266580415AA0A7D000BE0D4 /* adapter */,
+				7266580215AA09E5000BE0D4 /* Util.h */,
 			);
-			path = GL;
+			name = utils;
+			sourceTree = "<group>";
+		};
+		7266580415AA0A7D000BE0D4 /* adapter */ = {
+			isa = PBXGroup;
+			children = (
+				7266580815AA0E83000BE0D4 /* win */,
+				7266580715AA0E79000BE0D4 /* macos */,
+			);
+			name = adapter;
+			sourceTree = "<group>";
+		};
+		7266580715AA0E79000BE0D4 /* macos */ = {
+			isa = PBXGroup;
+			children = (
+				7266580615AA0AB3000BE0D4 /* UtilAdapter.h */,
+			);
+			name = macos;
+			sourceTree = "<group>";
+		};
+		7266580815AA0E83000BE0D4 /* win */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = win;
 			sourceTree = "<group>";
 		};
 		72FD033C15A72AAD0039FA4C /* adapters */ = {
 			isa = PBXGroup;
 			children = (
-				72FD033D15A72AB60039FA4C /* WindowManagerAdapter.h */,
-				72FD033E15A72AD80039FA4C /* GLFWAdapter.h */,
-				72FD033F15A72B640039FA4C /* GLFWAdapter.cpp */,
+				72A37E2415AB1FDF00A9FBB8 /* GLFWAdapter.cpp */,
+				72A37E2515AB1FDF00A9FBB8 /* GLFWAdapter.h */,
+				72A37E2615AB1FDF00A9FBB8 /* WindowManagerAdapter.h */,
 			);
 			name = adapters;
+			sourceTree = "<group>";
+		};
+		72FD034915A7DAC00039FA4C /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				72A37E2115AB01BF00A9FBB8 /* tinyxml2.cpp */,
+				72A37E2215AB01BF00A9FBB8 /* tinyxml2.h */,
+				72FD035515A7DEFA0039FA4C /* glfw.h */,
+				72FD035615A7DEFA0039FA4C /* libglfw.a */,
+			);
+			path = libs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,13 +297,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A37E2315AB02F100A9FBB8 /* tinyxml2.cpp in Sources */,
 				1B6E728E14A097030093563A /* main.cpp in Sources */,
 				1B6E72AC14A098180093563A /* Gepeto.cpp in Sources */,
 				1B6E72B114A098230093563A /* Render.cpp in Sources */,
 				1B6E72B214A098230093563A /* WindowManager.cpp in Sources */,
 				1B6E72BA14A1730A0093563A /* ResourceManager.cpp in Sources */,
 				1B6E72C014A178870093563A /* Core.cpp in Sources */,
-				72FD034015A72B640039FA4C /* GLFWAdapter.cpp in Sources */,
+				72FD035D15A9D2640039FA4C /* Camera.cpp in Sources */,
+				7266580015AA0186000BE0D4 /* Game.cpp in Sources */,
+				72A37E2715AB1FDF00A9FBB8 /* GLFWAdapter.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,7 +366,8 @@
 				INFOPLIST_FILE = "gepeto/gepeto-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/gepeto/sys\"",
+					"\"$(SRCROOT)/gepeto/libs\"",
+					"\"$(SRCROOT)/gepeto/\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -329,7 +382,8 @@
 				INFOPLIST_FILE = "gepeto/gepeto-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/gepeto/sys\"",
+					"\"$(SRCROOT)/gepeto/libs\"",
+					"\"$(SRCROOT)/gepeto/\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

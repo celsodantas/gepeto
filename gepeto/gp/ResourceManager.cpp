@@ -12,6 +12,9 @@
 
 #include "GLFWAdapter.h"
 
+#include "Gepeto.h"
+#include "Game.h"
+
 ResourceManager::~ResourceManager()
 {
     delete _windowManager;

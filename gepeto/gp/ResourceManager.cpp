@@ -12,6 +12,13 @@
 
 #include "GLFWAdapter.h"
 
+ResourceManager::~ResourceManager()
+{
+    delete _windowManager;
+    delete _render;
+    delete _core;
+}
+
 int ResourceManager::init()
 {
     /*

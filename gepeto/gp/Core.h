@@ -11,12 +11,14 @@
 
 class ResourceManager;
 class Render;
+class Gepeto;
+class Game;
 
 class Core
 {
 public:
     Core(ResourceManager *manager);
-    void loop();
+    void loop(Game &game);
     
     void setRender(Render *render)                      { _render = render; }
 private:

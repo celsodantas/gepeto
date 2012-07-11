@@ -10,18 +10,30 @@
 #include "ResourceManager.h"
 #include "render/Render.h"
 
+#include "Game.h"
+
+#include "Util.h"
+
 Core::Core(ResourceManager *manager)
 {
     _manager = manager;
 }
 
-void Core::loop()
+void Core::loop(Game &game)
 {
     int running = 1;
     
+    double elapsedSecs;
+    
+    elapsedSecs = Util::elapsedTimeSecs();
+    
     while (running) {
-        _render->draw();
+        elapsedSecs = Util::elapsedTimeSecs();
         
+        game.frame(elapsedSecs);
+        
+        _render->draw();
+    
         swapBuffers();
     }
 }

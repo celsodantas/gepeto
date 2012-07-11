@@ -12,7 +12,7 @@
 #include <iostream>
 #include "Gepeto.h"
 
-#define GAME_CLASS Game
+#define GAMECLASS Game
 
 ///////////////
 //
@@ -23,7 +23,6 @@
 class Game
 {
 public:
-    
     Game(Gepeto *gepeto);
 
     void setup();    

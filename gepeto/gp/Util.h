@@ -9,12 +9,7 @@
 #ifndef gepeto_Util_h
 #define gepeto_Util_h
 
-#ifdef DARWIN
-    #include "sys/macos/UtilAdapter.h"
-#else  // WINDOWS_OS
-    // TODO :: implement OS dependant Util
-    #include "sys/macos/UtilAdapter.h"
-#endif
+#include "sys/UtilAdapter.h"
 
 class Util
 {

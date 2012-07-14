@@ -7,13 +7,15 @@
 //
 
 #include <iostream>
-#include "opengl/gl.h"
+#include "opengl.h"
 #include "Render.h"
 
-#include "glfw.h"
-
+#include <gl/glut.h>
+#include <vector>
+#include "../loader/collada/ColladaLoader.h"
 #define BUFFER_OFFSET(offset) ((GLvoid *) offset)
-GLuint bufPointer[2];
+GLuint bufPointer[3];
+extern std::vector<geometry_asset> *assets;
 
 Render::Render()
 {
@@ -21,9 +23,6 @@ Render::Render()
     _green  = 0.0f;
     _blue   = 0.0f;
     _alpha  = 0.0f;
-    
-//  glEnable(GL_AUTO_NORMAL);
-//	glEnable(GL_NORMALIZE);
     
     glShadeModel(GL_SMOOTH);
 	
@@ -35,7 +34,7 @@ Render::Render()
     // Configure culling
     glEnable(GL_CULL_FACE);
     glCullFace(GL_FRONT);
-    glFrontFace(GL_CCW);
+    glFrontFace(GL_CW);
 
     // Enable depth testing
     glEnable(GL_DEPTH_TEST);
@@ -46,23 +45,51 @@ Render::Render()
     //////////////
     //  VBO test
     //////////////
-    
-    glEnableClientState(GL_VERTEX_ARRAY);
 
-    GLfloat vertices[24] = { 1, 1, -1, 1, -1, -1, -1, -1, -1, -1, 1, -1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1 };
-    GLubyte indices[24] =  { 0, 1, 2, 3, 4, 7, 6, 5, 0, 4, 5, 1, 1, 5, 6, 2, 2, 6, 7, 3, 4, 0, 3, 7 };
+    ////
+    // This is temporary
+    ////
+    glGenBuffers(3, bufPointer);
+    glEnableClientState(GL_VERTEX_ARRAY);
+    glEnableClientState(GL_NORMAL_ARRAY);
     
-    glGenBuffers(2, bufPointer);
+    for (unsigned int i = 0; i < assets->size(); ++i) {
+        geometry_asset asset = assets->at(i);
+        
+        // VERTICES
+        glBindBuffer(GL_ARRAY_BUFFER, bufPointer[0]);
+        glBufferData(GL_ARRAY_BUFFER, asset.map["POSITION"].size, asset.map["POSITION"].data, GL_STATIC_DRAW);
+        
+        glVertexPointer(3, GL_FLOAT, 0, BUFFER_OFFSET(0));
+        
+        // NORMALS
+        glBindBuffer(GL_ARRAY_BUFFER, bufPointer[1]);
+        glBufferData(GL_ARRAY_BUFFER, asset.map["NORMAL"].size, asset.map["NORMAL"].data, GL_STATIC_DRAW);
+        
+        glVertexPointer(3, GL_FLOAT, 0, BUFFER_OFFSET(0));
+        
+        // INDICES
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, bufPointer[2]);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, asset.indices_qtd * sizeof(unsigned short), asset.indices, GL_STATIC_DRAW);
+    }
     
-    // VERTICES
-    glBindBuffer(GL_ARRAY_BUFFER, bufPointer[0]);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
+    // This is temporary
+    GLfloat mat_specular[] = { 1.0f, 1.0f, 1.0f, 1.0f };
+    GLfloat mat_shininess[] = { 50.0f };
+    GLfloat light_position[] = { -2.0f, 2.0f, -3.0f, 0.0f };
+    GLfloat white_light[] = { 1.0f, 1.0f, 1.0f, 1.0f };
+    GLfloat lmodel_ambient[] = { 0.9f, 0.9f, 0.9f, 1.0f };
     
-    glVertexPointer(3, GL_FLOAT, 0, BUFFER_OFFSET(0));
+    glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
+    glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
+ 
+    glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, white_light);
+    glLightfv(GL_LIGHT0, GL_SPECULAR, white_light);
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, lmodel_ambient);
     
-    // INDICES
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, bufPointer[1]);
-    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
 }
 
 void Render::draw() 
@@ -70,19 +97,30 @@ void Render::draw()
     clearScreen();
     clearScreenColor(_red, _green, _blue, _alpha);
         
-    // Vertexes
-    glBindBuffer(GL_ARRAY_BUFFER, bufPointer[0]);
-    glVertexPointer(3, GL_FLOAT, 0, BUFFER_OFFSET(0));  
     
-    // Normals    
-    //glNormalPointer(GL_FLOAT, 24, BUFFER_OFFSET(12));
+    for (unsigned int i = 0; i < assets->size(); ++i) {
+        glFrontFace(GL_CW);
+        
+        geometry_asset asset = assets->at(i);
+        
+        // Vertexes
+        glBindBuffer(GL_ARRAY_BUFFER, bufPointer[0]);
+        glVertexPointer(asset.map["POSITION"].stride, GL_FLOAT, 0, BUFFER_OFFSET(0));  
+        
+        // Normals    
+        glBindBuffer(GL_ARRAY_BUFFER, bufPointer[1]);
+        glNormalPointer(GL_FLOAT, asset.map["NORMAL"].stride, BUFFER_OFFSET(0));
+        
+        // Indexes
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, bufPointer[2]);
+        
+        glDrawElements(asset.primitive, asset.indices_qtd, GL_UNSIGNED_SHORT, BUFFER_OFFSET(0));
+    }
     
-    // Indexes
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, bufPointer[1]);
     
-    glColor3f(1.0f, 0.0f, 0.0f);    // RED
-    glDrawElements(GL_QUADS, 24, GL_UNSIGNED_BYTE, BUFFER_OFFSET(0));
-
+    glFrontFace(GL_CW);
+    glTranslated(2.0, 0.0, 2.0);
+	glutSolidCube(2.0);
 }
 
 void Render::clearScreen()

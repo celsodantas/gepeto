@@ -9,7 +9,7 @@
 #ifndef __gp_window_manager_h
 #define __gp_window_manager_h
 
-#include "WindowManagerAdapter.h"
+#include "adapters/WindowManagerAdapter.h"
 
 class WindowManager {
 public: 

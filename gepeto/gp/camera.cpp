@@ -8,6 +8,9 @@
 
 #include <iostream>
 #include "Camera.h"
+#include <math.h>
+
+#define PI 3.14159265
 
 void Camera::resize()
 {
@@ -52,4 +55,16 @@ void Camera::addPosY(double v)
 void Camera::addPosZ(double v)
 {
     _posZ += v;
+}
+
+void Camera::rotate(double delta_t)
+{
+    static float x;
+    static float z;
+
+    x += 0.01f;
+    z += 0.01f;    
+    
+    _posX = (double) sinf(x) * 10.0f;
+    _posZ = (double) cosf(z) * 10.0f;
 }

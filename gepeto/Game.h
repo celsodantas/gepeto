@@ -10,7 +10,7 @@
 #define gepeto_Game_h
 
 #include <iostream>
-#include "Gepeto.h"
+#include "gp/Gepeto.h" 
 
 #define GAMECLASS Game
 

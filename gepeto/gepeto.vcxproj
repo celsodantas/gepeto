@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B6055FCD-8CE2-4D9F-90CE-CE35E3DB65C5}</ProjectGuid>
+    <RootNamespace>gepeto</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>Z:\code\cpp-apps\gepeto\gepeto\external\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>Z:\code\cpp-apps\gepeto\gepeto\external\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="external\src\tinyxml2.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="gp\Camera.cpp" />
+    <ClCompile Include="gp\Core.cpp" />
+    <ClCompile Include="gp\Gepeto.cpp" />
+    <ClCompile Include="gp\loader\collada\ColladaLoader.cpp" />
+    <ClCompile Include="gp\render\adapters\GLFWAdapter.cpp" />
+    <ClCompile Include="gp\render\Render.cpp" />
+    <ClCompile Include="gp\render\WindowManager.cpp" />
+    <ClCompile Include="gp\ResourceManager.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="external\include\GL\glew.h" />
+    <ClInclude Include="external\include\GL\glfw.h" />
+    <ClInclude Include="external\include\GL\glut.h" />
+    <ClInclude Include="external\include\GL\glxew.h" />
+    <ClInclude Include="external\include\GL\wglew.h" />
+    <ClInclude Include="external\include\tinyxml2.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="gp\Camera.h" />
+    <ClInclude Include="gp\Core.h" />
+    <ClInclude Include="gp\Gepeto.h" />
+    <ClInclude Include="gp\loader\collada\ColladaLoader.h" />
+    <ClInclude Include="gp\render\adapters\GLFWAdapter.h" />
+    <ClInclude Include="gp\render\adapters\WindowManagerAdapter.h" />
+    <ClInclude Include="gp\render\opengl.h" />
+    <ClInclude Include="gp\render\Render.h" />
+    <ClInclude Include="gp\render\WindowManager.h" />
+    <ClInclude Include="gp\ResourceManager.h" />
+    <ClInclude Include="gp\sys\UtilAdapter.h" />
+    <ClInclude Include="gp\Util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="external\lib\GLFW.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

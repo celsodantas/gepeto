@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\gp">
+      <UniqueIdentifier>{24198c7c-78c4-41f3-be0f-d5bc042d5d5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gp\assets">
+      <UniqueIdentifier>{bf27d46f-7585-4bad-a35a-bfb2fef782cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gp\loader">
+      <UniqueIdentifier>{a14164f7-e162-4140-b260-8bac39fd69f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gp\render">
+      <UniqueIdentifier>{b61bd716-7c9b-4ef7-978c-a8270a09cd77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gp\sys">
+      <UniqueIdentifier>{2779eb27-6b37-4f49-9582-2573edd28578}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gp\loader\collada">
+      <UniqueIdentifier>{f03fd3dd-96d1-42f9-a0e0-ace6a2a19d8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\gp\render\adapters">
+      <UniqueIdentifier>{8c7bdee8-1e50-48d0-ba97-56f961e6c7c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\external">
+      <UniqueIdentifier>{d1f6b7e6-3828-4c44-aa83-886fcb41bc65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\external\include">
+      <UniqueIdentifier>{69008f96-bfef-4d46-a877-d01b4d3c9027}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\external\lib">
+      <UniqueIdentifier>{f50d1437-8366-4adf-ae9b-b4d2cdd40843}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\external\src">
+      <UniqueIdentifier>{50769699-0bac-4b4d-a540-b074b5f06182}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\external\include\GL">
+      <UniqueIdentifier>{6636ae30-4e5b-46c4-9ced-1a01cc60d077}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\start">
+      <UniqueIdentifier>{93050e17-6a5a-4749-9688-006367715dbf}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="gp\Camera.cpp">
+      <Filter>Header Files\gp</Filter>
+    </ClCompile>
+    <ClCompile Include="gp\Core.cpp">
+      <Filter>Header Files\gp</Filter>
+    </ClCompile>
+    <ClCompile Include="gp\Gepeto.cpp">
+      <Filter>Header Files\gp</Filter>
+    </ClCompile>
+    <ClCompile Include="gp\ResourceManager.cpp">
+      <Filter>Header Files\gp</Filter>
+    </ClCompile>
+    <ClCompile Include="gp\loader\collada\ColladaLoader.cpp">
+      <Filter>Header Files\gp\loader\collada</Filter>
+    </ClCompile>
+    <ClCompile Include="gp\render\Render.cpp">
+      <Filter>Header Files\gp\render</Filter>
+    </ClCompile>
+    <ClCompile Include="gp\render\WindowManager.cpp">
+      <Filter>Header Files\gp\render</Filter>
+    </ClCompile>
+    <ClCompile Include="gp\render\adapters\GLFWAdapter.cpp">
+      <Filter>Header Files\gp\render\adapters</Filter>
+    </ClCompile>
+    <ClCompile Include="external\src\tinyxml2.cpp">
+      <Filter>Header Files\external\src</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\start</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files\start</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="gp\Util.h">
+      <Filter>Header Files\gp</Filter>
+    </ClInclude>
+    <ClInclude Include="gp\Camera.h">
+      <Filter>Header Files\gp</Filter>
+    </ClInclude>
+    <ClInclude Include="gp\Core.h">
+      <Filter>Header Files\gp</Filter>
+    </ClInclude>
+    <ClInclude Include="gp\Gepeto.h">
+      <Filter>Header Files\gp</Filter>
+    </ClInclude>
+    <ClInclude Include="gp\ResourceManager.h">
+      <Filter>Header Files\gp</Filter>
+    </ClInclude>
+    <ClInclude Include="gp\sys\UtilAdapter.h">
+      <Filter>Header Files\gp\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="gp\loader\collada\ColladaLoader.h">
+      <Filter>Header Files\gp\loader\collada</Filter>
+    </ClInclude>
+    <ClInclude Include="gp\render\opengl.h">
+      <Filter>Header Files\gp\render</Filter>
+    </ClInclude>
+    <ClInclude Include="gp\render\Render.h">
+      <Filter>Header Files\gp\render</Filter>
+    </ClInclude>
+    <ClInclude Include="gp\render\WindowManager.h">
+      <Filter>Header Files\gp\render</Filter>
+    </ClInclude>
+    <ClInclude Include="gp\render\adapters\WindowManagerAdapter.h">
+      <Filter>Header Files\gp\render\adapters</Filter>
+    </ClInclude>
+    <ClInclude Include="gp\render\adapters\GLFWAdapter.h">
+      <Filter>Header Files\gp\render\adapters</Filter>
+    </ClInclude>
+    <ClInclude Include="external\include\tinyxml2.h">
+      <Filter>Header Files\external\include</Filter>
+    </ClInclude>
+    <ClInclude Include="external\include\GL\glfw.h">
+      <Filter>Header Files\external\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="external\include\GL\glut.h">
+      <Filter>Header Files\external\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="external\include\GL\glxew.h">
+      <Filter>Header Files\external\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="external\include\GL\wglew.h">
+      <Filter>Header Files\external\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="external\include\GL\glew.h">
+      <Filter>Header Files\external\include\GL</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Source Files\start</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="external\lib\GLFW.lib">
+      <Filter>Header Files\external\lib</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

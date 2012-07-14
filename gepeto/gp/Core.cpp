@@ -10,7 +10,7 @@
 #include "ResourceManager.h"
 #include "render/Render.h"
 
-#include "Game.h"
+#include "../Game.h"
 
 #include "Util.h"
 

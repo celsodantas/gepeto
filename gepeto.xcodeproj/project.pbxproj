@@ -20,6 +20,8 @@
 		7266580015AA0186000BE0D4 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 726657FF15AA0186000BE0D4 /* Game.cpp */; };
 		72A37E2315AB02F100A9FBB8 /* tinyxml2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72A37E2115AB01BF00A9FBB8 /* tinyxml2.cpp */; };
 		72A37E2715AB1FDF00A9FBB8 /* GLFWAdapter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72A37E2415AB1FDF00A9FBB8 /* GLFWAdapter.cpp */; };
+		72ABCE9915AE66DD00E9C0F9 /* ColladaLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72ABCE9815AE66DD00E9C0F9 /* ColladaLoader.cpp */; };
+		72F0D86315AFAC42009235B7 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72F0D86215AFAC42009235B7 /* GLUT.framework */; };
 		72FD035715A7DEFA0039FA4C /* libglfw.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FD035615A7DEFA0039FA4C /* libglfw.a */; };
 		72FD035D15A9D2640039FA4C /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 72FD035B15A9D2630039FA4C /* Camera.cpp */; };
 /* End PBXBuildFile section */
@@ -54,6 +56,9 @@
 		72A37E2415AB1FDF00A9FBB8 /* GLFWAdapter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GLFWAdapter.cpp; path = adapters/GLFWAdapter.cpp; sourceTree = "<group>"; };
 		72A37E2515AB1FDF00A9FBB8 /* GLFWAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GLFWAdapter.h; path = adapters/GLFWAdapter.h; sourceTree = "<group>"; };
 		72A37E2615AB1FDF00A9FBB8 /* WindowManagerAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WindowManagerAdapter.h; path = adapters/WindowManagerAdapter.h; sourceTree = "<group>"; };
+		72ABCE9715AE642600E9C0F9 /* ColladaLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColladaLoader.h; sourceTree = "<group>"; };
+		72ABCE9815AE66DD00E9C0F9 /* ColladaLoader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ColladaLoader.cpp; sourceTree = "<group>"; };
+		72F0D86215AFAC42009235B7 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
 		72FD035515A7DEFA0039FA4C /* glfw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = glfw.h; sourceTree = "<group>"; };
 		72FD035615A7DEFA0039FA4C /* libglfw.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libglfw.a; sourceTree = "<group>"; };
 		72FD035B15A9D2630039FA4C /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
@@ -66,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F0D86315AFAC42009235B7 /* GLUT.framework in Frameworks */,
 				1B6E72A114A097660093563A /* OpenGL.framework in Frameworks */,
 				1B6E728214A097030093563A /* Cocoa.framework in Frameworks */,
 				72FD035715A7DEFA0039FA4C /* libglfw.a in Frameworks */,
@@ -95,6 +101,7 @@
 		1B6E728014A097030093563A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				72F0D86215AFAC42009235B7 /* GLUT.framework */,
 				1B6E72A014A097660093563A /* OpenGL.framework */,
 				1B6E728114A097030093563A /* Cocoa.framework */,
 				1B6E728314A097030093563A /* Other Frameworks */,
@@ -138,6 +145,7 @@
 		1B6E72A214A097C10093563A /* gp */ = {
 			isa = PBXGroup;
 			children = (
+				72ABCE9415AE63E900E9C0F9 /* loader */,
 				7266580115AA09CC000BE0D4 /* utils */,
 				72FD035B15A9D2630039FA4C /* Camera.cpp */,
 				72FD035C15A9D2640039FA4C /* Camera.h */,
@@ -212,6 +220,23 @@
 			children = (
 			);
 			name = win;
+			sourceTree = "<group>";
+		};
+		72ABCE9415AE63E900E9C0F9 /* loader */ = {
+			isa = PBXGroup;
+			children = (
+				72ABCE9615AE641800E9C0F9 /* collada */,
+			);
+			path = loader;
+			sourceTree = "<group>";
+		};
+		72ABCE9615AE641800E9C0F9 /* collada */ = {
+			isa = PBXGroup;
+			children = (
+				72ABCE9715AE642600E9C0F9 /* ColladaLoader.h */,
+				72ABCE9815AE66DD00E9C0F9 /* ColladaLoader.cpp */,
+			);
+			path = collada;
 			sourceTree = "<group>";
 		};
 		72FD033C15A72AAD0039FA4C /* adapters */ = {
@@ -300,6 +325,7 @@
 				72A37E2315AB02F100A9FBB8 /* tinyxml2.cpp in Sources */,
 				1B6E728E14A097030093563A /* main.cpp in Sources */,
 				1B6E72AC14A098180093563A /* Gepeto.cpp in Sources */,
+				72ABCE9915AE66DD00E9C0F9 /* ColladaLoader.cpp in Sources */,
 				1B6E72B114A098230093563A /* Render.cpp in Sources */,
 				1B6E72B214A098230093563A /* WindowManager.cpp in Sources */,
 				1B6E72BA14A1730A0093563A /* ResourceManager.cpp in Sources */,
@@ -333,6 +359,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -353,6 +380,7 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				SDKROOT = macosx;
 			};
@@ -363,11 +391,11 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gepeto/gepeto-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/gepeto/\"";
 				INFOPLIST_FILE = "gepeto/gepeto-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/gepeto/libs\"",
-					"\"$(SRCROOT)/gepeto/\"",
+					"\"$(SRCROOT)/gepeto/libs/\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -379,11 +407,11 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "gepeto/gepeto-Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/gepeto/\"";
 				INFOPLIST_FILE = "gepeto/gepeto-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/gepeto/libs\"",
-					"\"$(SRCROOT)/gepeto/\"",
+					"\"$(SRCROOT)/gepeto/libs/\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;

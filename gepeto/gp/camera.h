@@ -9,7 +9,7 @@
 #ifndef gepeto_camera_h
 #define gepeto_camera_h
 
-#include "glfw.h"
+#include <GL/glfw.h>
 
 class Camera
 {
@@ -38,16 +38,18 @@ public:
                   _upX,   _upY,   _upZ);
     }
     
+    void rotate(double delta_t);
+    
 private:
-    float _posX,
+    double _posX,
           _posY,
           _posZ;
     
-    float _lookX, 
+    double _lookX, 
           _lookY, 
           _lookZ;
     
-    float _upX, 
+    double _upX, 
           _upY, 
           _upZ;
     

@@ -10,8 +10,8 @@
 #define gepeto_GLFWAdapter_h
 
 #include "WindowManagerAdapter.h"
-#include "opengl/gl.h"
-#include "../../../libs/glfw.h"     // TODO:: Fix this long "..." path
+#include "../opengl.h"
+#include <GL/glfw.h>
 
 class GLFWAdapter: public WindowManagerAdapter
 {

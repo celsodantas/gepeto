@@ -1,0 +1,32 @@
+﻿Build started 14/07/12 2:00:10 PM.
+Project "Z:\code\cpp-apps\gepeto\gepeto\gepeto.vcxproj" on node 2 (build target(s)).
+InitializeBuildStatus:
+  Creating "Debug\gepeto.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"Z:\code\cpp-apps\gepeto\gepeto\external\include" /ZI /nologo /W3 /WX- /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MD /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt gp\Camera.cpp
+  Camera.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Z:\code\cpp-apps\gepeto\gepeto\Debug\gepeto.exe" /NOLOGO /LIBPATH:"Z:\code\cpp-apps\gepeto\gepeto\external\lib" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\gepeto.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"Z:\code\cpp-apps\gepeto\gepeto\Debug\gepeto.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Z:\code\cpp-apps\gepeto\gepeto\Debug\gepeto.lib" /MACHINE:X86 Debug\tinyxml2.obj
+  Debug\Game.obj
+  Debug\Camera.obj
+  Debug\Core.obj
+  Debug\Gepeto.obj
+  Debug\ColladaLoader.obj
+  Debug\GLFWAdapter.obj
+  Debug\Render.obj
+  Debug\WindowManager.obj
+  Debug\ResourceManager.obj
+  Debug\main.obj
+  external\lib\GLFW.lib
+  LINK : Z:\code\cpp-apps\gepeto\gepeto\Debug\gepeto.exe not found or not built by the last incremental link; performing full link
+  gepeto.vcxproj -> Z:\code\cpp-apps\gepeto\gepeto\Debug\gepeto.exe
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"Z:\code\cpp-apps\gepeto\gepeto\Debug\gepeto.exe;#1" /manifest Debug\gepeto.exe.intermediate.manifest
+FinalizeBuildStatus:
+  Deleting file "Debug\gepeto.unsuccessfulbuild".
+  Touching "Debug\gepeto.lastbuildstate".
+Done Building Project "Z:\code\cpp-apps\gepeto\gepeto\gepeto.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.48

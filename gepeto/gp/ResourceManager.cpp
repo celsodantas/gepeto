@@ -10,10 +10,10 @@
 #include "Core.h"
 #include "render/Render.h"
 
-#include "GLFWAdapter.h"
+#include "render/adapters/GLFWAdapter.h"
 
 #include "Gepeto.h"
-#include "Game.h"
+#include "../Game.h"
 
 ResourceManager::~ResourceManager()
 {

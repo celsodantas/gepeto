@@ -29,6 +29,8 @@ int  GLFWAdapter::openWindow(int width, int height)
         exit( EXIT_FAILURE );
     }
     
+	glewInit();
+
     return 1;
 }
 

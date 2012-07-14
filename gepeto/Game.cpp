@@ -20,12 +20,12 @@ void Game::setup()
 {
     _gepeto->camera().resize();
     
-    _gepeto->camera().setPosition(0.0f, 0.0f, -10.0f);
+    _gepeto->camera().setPosition(-1.0f, 2.0f, -7.0f);
     _gepeto->camera().lookAt(0.0f, 0.0f, 0.0f);
 }
 
 void Game::frame(double delta)
 {
-    _gepeto->camera().addPosX(0.5 * delta);
+    _gepeto->camera().rotate(delta);
     _gepeto->camera().update();
 }
